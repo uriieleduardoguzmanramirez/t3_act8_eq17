@@ -16,3 +16,9 @@ export function iniciarSesion(username, password) {
     body: JSON.stringify({ username, password, expiresInMins: 30 })
   });
 }
+
+// NUEVA FUNCIÓN AGREGADA EN ESTE COMMIT
+export async function obtenerMiembros() {
+  const datos = await solicitar('/users?limit=0');
+  return datos.users;
+}
