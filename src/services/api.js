@@ -22,3 +22,24 @@ export async function obtenerMiembros() {
   const datos = await solicitar('/users?limit=0');
   return datos.users;
 }
+
+// NUEVAS FUNCIONES Y SOPORTE 404 AGREGADOS EN ESTE COMMIT
+export function agregarMiembro(datos) {
+  return solicitar('/users/add', {
+    method: 'POST',
+    headers: encabezados,
+    body: JSON.stringify(datos)
+  });
+}
+
+export function actualizarMiembro(miembro, datos) {
+  return solicitar('/users/' + miembro.id, {
+    method: 'PATCH',
+    headers: encabezados,
+    body: JSON.stringify(datos)
+  }, miembro.temporal === true);
+}
+
+export function borrarMiembro(miembro) {
+  return solicitar('/users/' + miembro.id, { method: 'DELETE' }, miembro.temporal === true);
+}
