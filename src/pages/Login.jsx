@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { iniciarSesion } from '../services/api';
+import logo from '../assets/logo_iron_gym.png';
+import fotoGym from '../assets/07_foto_principal.png';
 
 export default function Login({ alIngresar }) {
   const [usuario, setUsuario] = useState('');
@@ -31,11 +33,15 @@ export default function Login({ alIngresar }) {
     <div className="login-fondo">
       <div className="login-tarjeta shadow-lg">
         <div className="login-izquierda">
+
           <div className="marca-login">
-            <div className="marca-icono">✦</div>
-            <h1>IRON <span>GYM</span></h1>
-            <small>FUERZA SIN LÍMITES</small>
+            <img
+              src={logo}
+              alt="Logo IRON GYM"
+              className="logo-gym"
+            />
           </div>
+
           <h2 className="fs-5 mb-4 text-white">Iniciar sesión</h2>
           <form onSubmit={entrar}>
             <label className="form-label text-white">Usuario</label>
@@ -51,11 +57,15 @@ export default function Login({ alIngresar }) {
           </form>
           <small className="text-white-50 d-block mt-4">Prueba: emilys / emilyspass</small>
         </div>
+
         <div className="login-derecha">
-          <div className="pesas-simbolo"><i className="bi bi-lightning-charge-fill" /></div>
-          <div className="frase-gym">DISCIPLINA<br />CONSTANCIA<br /><strong>RESULTADOS</strong></div>
-          <p>TRAIN HARD · STAY STRONG</p>
+          <img
+            src={fotoGym}
+            alt="Gimnasio IRON GYM"
+            className="foto-gym"
+          />
         </div>
+
       </div>
     </div>
   );

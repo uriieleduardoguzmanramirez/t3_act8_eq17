@@ -1,0 +1,84 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #222; }
+body { margin: 0; background: #f4f5f7; }
+.btn-naranja { background: #e95113; color: white; border: 1px solid #e95113; }
+.btn-naranja:hover, .btn-naranja:focus { background: #c93b09; color: white; }
+
+/* LOGIN */
+.login-fondo { min-height: 100vh; background: #222; display: grid; place-items: center; padding: 24px; }
+.login-tarjeta { display: flex; width: min(930px, 100%); min-height: 505px; background: #111; overflow: hidden; border-radius: 12px; }
+.login-izquierda { width: 50%; padding: 50px; color: white; display: flex; flex-direction: column; justify-content: center; }
+.marca-login { text-align: center; margin-bottom: 40px; }
+.marca-icono { font-size: 42px; color: #eee; line-height: 1; }
+.marca-login h1 { font-size: 25px; font-weight: bold; margin: 8px 0 0; }
+.marca-login span, .sidebar-marca span { color: #f05a1a; }
+.marca-login small { letter-spacing: 3px; font-size: 9px; color: #aaa; }
+.login-derecha { width: 50%; background: radial-gradient(circle at 50% 68%, #89502c 0%, #2b2018 45%, #0d0e10 90%); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; position: relative; }
+.login-derecha::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0, transparent 66px, #09090940 67px, #09090940 70px); }
+.pesas-simbolo { position: relative; font-size: 90px; color: #f05a1a; }
+.frase-gym { position: relative; font-size: 33px; font-weight: 800; line-height: 1.25; letter-spacing: 3px; }
+.frase-gym strong { color: #ff874f; }
+.login-derecha p { position: relative; color: #ccc; font-size: 12px; letter-spacing: 3px; margin-top: 30px; }
+
+/* DASHBOARD */
+.sistema { display: flex; min-height: 100vh; }
+.sidebar { width: 218px; background: #272727; color: #eee; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 24px 13px; flex-shrink: 0; }
+.sidebar-marca { font-size: 22px; font-weight: 800; margin-left: 12px; }
+.sidebar-subtitulo { color: #a6a6a6; font-size: 10px; letter-spacing: 2px; margin: 3px 0 0 12px; }
+.sidebar-enlace, .sidebar-salir { border: 0; background: transparent; color: #ccc; text-align: left; padding: 11px 14px; width: 100%; border-radius: 7px; margin-bottom: 6px; }
+.sidebar-enlace:hover, .sidebar-enlace.activo { background: #e95113; color: white; }
+.sidebar-enlace i, .sidebar-salir i { margin-right: 10px; }
+.sidebar-salir { margin-top: auto; }
+.sidebar-salir:hover { color: white; background: #444; }
+.contenido { min-width: 0; flex: 1; }
+.barra-superior { background: white; border-bottom: 1px solid #e9e9e9; padding: 17px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.foto-usuario { width: 39px; height: 39px; object-fit: cover; border-radius: 50%; background: #eee; }
+.foto-alternativa { font-size: 26px; }
+.nombre-usuario { font-size: 13px; font-weight: 600; }
+.dato-card { border: 0; border-top: 4px solid #ec5a1c; min-height: 110px; }
+.dato-card small { color: #777; }
+.dato-card strong { font-size: 33px; }
+.table thead th { background: #f4f5f7; color: #667; font-size: 12px; white-space: nowrap; }
+.table tbody td { font-size: 13px; }
+.foto-tabla { display: inline-flex; width: 38px; height: 38px; border-radius: 50%; object-fit: cover; align-items: center; justify-content: center; background: #eee; }
+.sin-foto { font-size: 22px; }
+.fondo-modal { position: fixed; inset: 0; background: #0009; display: grid; place-items: center; z-index: 100; padding: 20px; }
+.modal-contenido { width: min(430px, 100%); background: white; border-radius: 12px; padding: 26px; }
+
+@media (max-width: 700px) {
+  .login-tarjeta { max-width: 430px; }
+  .login-izquierda { width: 100%; padding: 34px 28px; }
+  .login-derecha { display: none; }
+  .sidebar { width: 70px; padding: 20px 8px; }
+  .sidebar-marca { margin-left: 0; font-size: 13px; }
+  .sidebar-subtitulo { display: none; }
+  .sidebar-enlace { text-align: center; font-size: 0; }
+  .sidebar-enlace i { font-size: 22px; margin: 0; }
+  .sidebar-salir { font-size: 0; text-align: center; }
+  .sidebar-salir i { font-size: 22px; margin: 0; }
+  .barra-superior { padding: 14px 12px; }
+  .nombre-usuario { display: none; }
+}
+
+/* Logo */
+.logo-gym {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Imagen del lado derecho del login */
+.login-derecha {
+    padding: 0;
+    overflow: hidden;
+}
+.login-derecha::before {
+    display: none;
+}
+.foto-gym {
+    width: 100%;
+    height: 100%;
+    min-height: 505px;
+    object-fit: cover;
+}
+
