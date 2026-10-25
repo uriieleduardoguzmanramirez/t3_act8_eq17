@@ -1,16 +1,40 @@
-# React + Vite
+# Actividad 8 - Proyecto t3_act8_eq17 (Iron Gym)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Integrantes (Equipo 17)
+- Carlos García
+- Uriel Guzmán
 
-Currently, two official plugins are available:
+## Información de Despliegue (VPS)
+- **Dirección IP del Servidor:** `52.159.103.236`
+- **Enlace al Proyecto Desplegado:** [http://52.159.103.236/t3_act8_eq17/](http://52.159.103.236/t3_act8_eq17/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## APIs Consumidas
+- **Autenticación (Fase 1):** `https://dummyjson.com/auth/login`
+- **Tabla de Datos / CRUD (Fase 3):** `https://dummyjson.com/products`
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades Implementadas
 
-## Expanding the ESLint configuration
+### Fase 1: Login (Front-end puro)
+- Formulario de autenticación con campos de usuario y contraseña siguiendo el mockup de Figma.
+- Consumo del endpoint POST de DummyJSON.
+- Manejo de estado (`useState`) para datos del usuario (incluyendo avatar de perfil).
+- Mensajes de validación y alertas de error en credenciales incorrectas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Fase 2: Sistema Simulado (Sidebar + Navbar)
+- Vista del sistema protegida condicionalmente por el estado de sesión.
+- Navbar interactivo con nombre del usuario, foto de perfil y botón para cerrar sesión.
+- Sidebar lateral con opciones de navegación.
+
+### Fase 3: Tabla de Datos, Filtros, Paginación y CRUD
+- **Filtros:** Búsqueda por texto y filtrado por categoría.
+- **Paginación:** Controles de navegación de página y selector de cantidad de registros (10, 20, 40, 50) reflejados dinámicamente en los parámetros de la URL (`?page=X&limit=Y`).
+- **Estados de carga y error:** Indicador visual durante peticiones y manejo claro de fallos de red.
+- **Acciones CRUD:** Funcionalidad de agregar, editar y eliminar registros con diálogos de confirmación previa, ejecutando peticiones reales HTTP (POST, PUT, DELETE) y actualizando el estado local (`useState`).
+
+### Fase 4: Despliegue en VPS
+- Configuración de `base: '/t3_act8_eq17/'` en `vite.config.js`.
+- Generación de build optimizado (`npm run build`).
+- Transferencia de archivos estáticos vía SFTP a la ruta del servidor web.
+- Configuración y puesta en marcha con Nginx en Ubuntu 22.04 LTS en Azure.
