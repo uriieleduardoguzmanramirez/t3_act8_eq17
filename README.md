@@ -1,8 +1,8 @@
 # Actividad 8 - Proyecto t3_act8_eq17 (Iron Gym)
 
 ## Integrantes (Equipo 17)
-- Carlos García
-- Uriel Guzmán
+- Carlos Enrique García Unda
+- Uriel Eduardo Guzmán Ramirez
 
 ## Información de Despliegue (VPS)
 - **Dirección IP del Servidor:** `52.159.103.236`
