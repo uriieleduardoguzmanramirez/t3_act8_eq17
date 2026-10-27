@@ -38,3 +38,19 @@
 - Generación de build optimizado (`npm run build`).
 - Transferencia de archivos estáticos vía SFTP a la ruta del servidor web.
 - Configuración y puesta en marcha con Nginx en Ubuntu 22.04 LTS en Azure.
+
+Capturas de Figma:
+Login
+<img width="967" height="506" alt="image" src="https://github.com/user-attachments/assets/22c6f18e-aa20-4b22-b56c-31af8d31a97e" />
+
+Dashboar:
+<img width="567" height="406" alt="image" src="https://github.com/user-attachments/assets/fc959c96-3829-4949-9ef5-57db15e426da" />
+
+Analisis:
+<img width="553" height="398" alt="image" src="https://github.com/user-attachments/assets/86d98d7d-1782-46d3-ba9b-af8a2fbd8ba3" />
+
+Miembros:
+<img width="553" height="392" alt="image" src="https://github.com/user-attachments/assets/fd7a9963-3e8b-4494-81e8-a7c8fcf5d195" />
+
+
+
